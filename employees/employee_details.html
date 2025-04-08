@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto py-10">
+        <h1 class="text-center text-3xl font-bold mb-6">Employee Management System</h1>
+
+        <div class="flex justify-center space-x-4 mb-6">
+            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" onclick="displayEmployees()">Display Employees</button>
+            <button class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600" onclick="calculateTotalSalaries()">Calculate Total Salaries</button>
+            <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600" onclick="displayHREmployees()">Display HR Employees</button>
+            <button class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600" onclick="findEmployeeById(2)">Find Employee by ID 2</button>
+        </div>
+
+        <div id="employeesDetails" class="border p-4 bg-white rounded shadow"></div>
+    </div>
+
+    <script src="./employee_details.js"></script>
+</body>
+</html>
