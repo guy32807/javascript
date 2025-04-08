@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <div class="container mx-auto p-6">
+        <h1 class="text-3xl font-bold mb-6 text-center">Book Management System</h1>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="mb-4">
+                <label for="bookName" class="block text-sm font-medium text-gray-700">Book Name:</label>
+                <input type="text" id="bookName" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="authorName" class="block text-sm font-medium text-gray-700">Author Name:</label>
+                <textarea id="authorName" rows="4" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+            </div>
+
+            <div class="mb-4">
+                <label for="bookDescription" class="block text-sm font-medium text-gray-700">Book Description:</label>
+                <textarea id="bookDescription" rows="4" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+            </div>
+
+            <div class="mb-4">
+                <label for="pagesNumber" class="block text-sm font-medium text-gray-700">No. of Pages:</label>
+                <input type="number" id="pagesNumber" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+            </div>
+
+            <button onclick="addBook()" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                Add Book
+            </button>
+        </div>
+
+        <h2 class="text-2xl font-bold mt-8 mb-4">Books</h2>
+        <div id="books" class="bg-white p-6 rounded-lg shadow-md">
+            <!-- books will be displayed here -->
+        </div>
+    </div>
+
+    <script src="./book_system.js"></script>
+</body>
+
+</html>
