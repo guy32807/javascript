@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <div class="container mx-auto p-6">
+        <h1 class="text-4xl font-bold text-center mb-8">Restaurant Menu Iteration</h1>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Breakfast Menu</h2>
+            <div id="breakfastTotalItems" class="text-lg text-gray-600 mb-2"></div>
+            <div id="breakfastMenuItems" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Main Course Menu</h2>
+            <div id="maincourseTotalItems" class="text-lg text-gray-600 mb-2"></div>
+            <div id="maincourseMenuItems" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Dessert Menu</h2>
+            <div id="dessertTotalItems" class="text-lg text-gray-600 mb-2"></div>
+            <div id="dessertMenuItems" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+        </section>
+    </div>
+
+    <script src="./restaurant_menu.js"></script>
+</body>
+</html>
