@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple grocery calculator to sum up grocery amounts.">
+    <meta name="keywords" content="Grocery, Calculator, HTML, CSS, JavaScript">
+    <meta name="author" content="Your Name">
+   <script src="grocery_list.js"></script>
+    <title>Grocery List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-96">
+        <h1 class="text-2xl font-bold mb-6 text-center">Grocery Calculator</h1>
+        <form id="groceryForm"></form>
+            <div class="mb-4">
+                <label for="grocery1" class="block text-gray-700 font-medium mb-2">Enter Grocery Amount 1</label>
+                <input type="number" id="grocery1" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="0.00">
+            </div>
+            <div class="mb-4">
+                <label for="grocery2" class="block text-gray-700 font-medium mb-2">Enter Grocery Amount 2</label>
+                <input type="number" id="grocery2" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="0.00">
+            </div>
+            <div class="mb-4">
+                <label for="grocery3" class="block text-gray-700 font-medium mb-2">Enter Grocery Amount 3</label>
+                <input type="number" id="grocery3" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="0.00">
+            </div>
+            <button type="button" id="calculateButton" onclick="calculateTotalAmount()" class="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                Calculate Total Amount
+            </button>
+            <script>
+                   
+            </script>
+        </form>
+        <p id="totalAmount" class="text-center text-lg font-medium text-gray-700 mt-4"></p>
+    </div>
+</body>
+</html>
