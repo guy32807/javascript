@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Survey</title>
+    <script src="product_survey.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-4 text-center">Luxury Watch Store Survey</h1>
+        <form id="surveyForm" class="space-y-4">
+            <div>
+                <label for="name" class="block font-medium">Name</label>
+                <input type="text" id="name" name="name" class="w-full border border-gray-300 rounded p-2" required>
+                <p id="nameConfirmation" class="text-sm text-green-500 hidden">Name confirmed.</p>
+            </div>
+            <div>
+                <label for="age" class="block font-medium">Age</label>
+                <input type="number" id="age" name="age" class="w-full border border-gray-300 rounded p-2" required>
+                <p id="ageConfirmation" class="text-sm text-green-500 hidden">Age confirmed.</p>
+            </div>
+            <div>
+                <label for="email" class="block font-medium">Email</label>
+                <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded p-2" required>
+                <p id="emailConfirmation" class="text-sm text-green-500 hidden">Email confirmed.</p>
+            </div>
+            <div>
+                <label for="job" class="block font-medium">Job</label>
+                <input type="text" id="job" name="job" class="w-full border border-gray-300 rounded p-2" required>
+                <p id="jobConfirmation" class="text-sm text-green-500 hidden">Job confirmed.</p>
+            </div>
+            <div>
+                <label for="designation" class="block font-medium">Designation</label>
+                <input type="text" id="designation" name="designation" class="w-full border border-gray-300 rounded p-2" required>
+                <p id="designationConfirmation" class="text-sm text-green-500 hidden">Designation confirmed.</p>
+            </div>
+            <div>
+                <label for="productType" class="block font-medium">Product Type</label>
+                <select id="productType" name="productType" class="w-full border border-gray-300 rounded p-2" required>
+                    <option value="" disabled selected>Select a product</option>
+                    <option value="Perfume">Perfume</option>
+                    <option value="Cream">Cream</option>
+                    <option value="Oil">Oil</option>
+                </select>
+                <p id="productTypeConfirmation" class="text-sm text-green-500 hidden">Product type confirmed.</p>
+            </div>
+            <div>
+                <label for="productName" class="block font-medium">Product Name</label>
+                <input type="text" id="productName" name="productName" class="w-full border border-gray-300 rounded p-2" required>
+                <p id="productNameConfirmation" class="text-sm text-green-500 hidden">Product name confirmed.</p>
+            <div>
+                <label for="feedback" class="block font-medium">Feedback</label>
+                <textarea id="feedback" name="feedback" rows="5" cols="30" class="w-full border border-gray-300 rounded p-2" placeholder="Enter your feedback here." required></textarea>
+                <p id="feedbackConfirmation" class="text-sm text-green-500 hidden">Feedback confirmed.</p>
+            </div>
+            <button id="submit" type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Submit Feedback</button>
+            <div id="userInfo" style="display: none;">
+                <h2>User Information:</h2>
+                <p>Name: <span id="userName"></span></p>
+                <p>Age: <span id="userAge"></span></p>
+                <p>Email: <span id="userEmail"></span></p>
+                <p>Job: <span id="userJob"></span></p>
+                <p>Designation: <span id="userDesignation"></span></p>
+                <p>Feedback for  <span id="userProductChoice"></span>: <span id="userFeedback"></span></p>
+              </div>
+        </form>
+    </div>
+</body>
+</html>

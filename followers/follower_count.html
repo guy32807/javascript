@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follower Count</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h1 class="text-2xl font-bold mb-4">Follower Count</h1>
+        <p id="followerCount" class="text-4xl font-semibold text-blue-500 mb-4">0</p>
+        <div class="flex justify-center space-x-4">
+            <button id="increaseBtn" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Increase</button>
+            <button id="decreaseBtn" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Decrease</button>
+            <button id="resetBtn" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        const followerCount = document.getElementById('followerCount');
+        const increaseBtn = document.getElementById('increaseBtn');
+        const decreaseBtn = document.getElementById('decreaseBtn');
+        const resetBtn = document.getElementById('resetBtn');
+
+        increaseBtn.onclick = () => {
+            count++;
+            followerCount.textContent = count;
+            if (count > 10) {
+            followerCount.classList.add('text-red-500');
+            } else {
+            followerCount.classList.remove('text-red-500');
+            }
+        };
+
+        decreaseBtn.onclick = () => {
+            count = Math.max(0, count - 1);
+            followerCount.textContent = count;
+        };
+
+        resetBtn.onclick = () => {
+            count = 0;
+            followerCount.textContent = count;
+            followerCount.classList.remove('text-red-500');
+        };
+
+        let count = 0;
+        increaseBtn.onclick = increaseCount;
+        decreaseBtn.onclick = decreaseCount;
+        resetBtn.onclick = resetCount;
+        function increaseCount() {
+            count++;
+            followerCount.textContent = count;
+            if (count > 10) {
+            followerCount.classList.add('text-red-500');
+            } else {
+            followerCount.classList.remove('text-red-500');
+            }
+        }
+
+        function decreaseCount() {
+            count = Math.max(0, count - 1);
+            followerCount.textContent = count;
+        }
+
+        function resetCount() {
+            count = 0;
+            followerCount.textContent = count;
+        }
+
+        increaseBtn.addEventListener('click', increaseCount);
+        decreaseBtn.addEventListener('click', decreaseCount);
+        resetBtn.addEventListener('click', resetCount);
+
+        increaseBtn.addEventListener('click', () => {
+            count++;
+            followerCount.textContent = count;
+            if(count> 10) {
+                followerCount.classList.add('text-red-500');
+            } else {
+                followerCount.classList.remove('text-red-500');
+            }
+        });
+        decreaseBtn.addEventListener('click', () => {
+            count = Math.max(0, count - 1);
+            followerCount.textContent = count;
+        });
+        decreaseBtn.addEventListener('click', () => {
+            if (count > 0) {
+                count--;
+                followerCount.textContent = count;
+            }
+        });
+
+        resetBtn.addEventListener('click', () => {
+            count = 0;
+            followerCount.textContent = count;
+        });
+    </script>
+</body>
+</html>
